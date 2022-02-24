@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de inserción (Añadir un nuevo registro)</title>
+    <link rel="stylesheet" href="./estiloinsercion/insercion.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body class="bg-secondary">
+    <div id="wrapper" class="container-fluid bg-light p-5">
+        
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-lg-6 m-auto">
+                <form method="post" action="..." class="border border-primary p-4">
+                    <div>
+                        <h1 class="text-center mb-3 py-3 text-danger">Registro</h1>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre <span>*</span></label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="nombreHelp" required>
+                        <div id="help" class="form-text">Campo obligatorio</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellidos" class="form-label">Apellidos <span>*</span></label>
+                        <input type="text" class="form-control" id="apellidos" name="apellidos" aria-describedby="apellidosHelp" required>
+                        <div id="help" class="form-text">Campo obligatorio</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="codpostal" class="form-label">Código postal <span>*</span></label>
+                        <input type="number" min="29001" max="29999" class="form-control" id="codpostal" name="codpostal" aria-describedby="codpostalHelp" required> 
+                        <div id="help" class="form-text">Campo obligatorio</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="provincia" class="form-label">Provincia <span>*</span></label>
+                        <select class="form-select" aria-label="Selecciona provincia"
+                        id="provincia" name="provincia">
+                            <option>--Selecciona provincia--</option>
+                            <option value="almeria">Almería</option>
+                            <option value="cadiz">Cádiz</option>
+                            <option value="cordoba">Córdoba</option>
+                            <option value="granada">Granada</option>
+                            <option value="huelva">Huelva</option>
+                            <option value="jaen">Jaén</option>
+                            <option value="malaga">Málaga</option>
+                            <option value="almeria">Sevilla</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="comentario">Comentario</label>
+                        <textarea class="my-2 form-control" placeholder="Deja aquí tu comentario" id="comentario" name="comentario"></textarea>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="mayoredad" name="mayoredad">
+                        <label class="form-check-label" for="mayoredad">Mayor de edad</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
